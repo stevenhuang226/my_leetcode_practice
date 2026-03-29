@@ -13,22 +13,15 @@ bool checkStrings(char *s1, char *s2)
 	int even_freq[26] = {0};
 
 	for (int i = 0; i < size; ++i) {
-		int ch = s1[i] - 'a';
+		int cha = s1[i] - 'a';
+		int chb = s2[i] - 'a';
 
 		if (i % 2 == 0) {
-			++even_freq[ch];
+			++even_freq[cha];
+			--even_freq[chb];
 		} else {
-			++odd_freq[ch];
-		}
-	}
-
-	for (int i = 0; i < size; ++i) {
-		int ch = s2[i] - 'a';
-
-		if (i % 2 == 0) {
-			--even_freq[ch];
-		} else {
-			--odd_freq[ch];
+			++odd_freq[cha];
+			--odd_freq[chb];
 		}
 	}
 
