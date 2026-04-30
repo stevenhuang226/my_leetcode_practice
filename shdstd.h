@@ -21,13 +21,16 @@
 */
 /* int's inf
 #define INF8 (INT8_MAX / 4)
+#define NEG_INF8 -(INF8)
+
 #define INF16 (INT16_MAX / 4)
+#define NEG_INF16 -(INF16)
+
 #define INF32 (INT32_MAX / 4)
+#define NEG_INF32 -(INF32)
+
 #define INF64 (INT64_MAX / 4)
 #define INFU64 (UINT64_MAX / 4)
-#define NEG_INF8 -(INF8)
-#define NEG_INF16 -(INF16)
-#define NEG_INF32 -(INF32)
 #define NEG_INF64 -(INF64)
 */
 /* roll-base hash
