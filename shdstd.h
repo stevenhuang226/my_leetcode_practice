@@ -30,8 +30,8 @@
 #define NEG_INF32 -(INF32)
 
 #define INF64 (INT64_MAX / 4)
-#define INFU64 (UINT64_MAX / 4)
 #define NEG_INF64 -(INF64)
+#define INFU64 (UINT64_MAX / 4)
 */
 /* roll-base hash
 #define ROLL_BASE 131
