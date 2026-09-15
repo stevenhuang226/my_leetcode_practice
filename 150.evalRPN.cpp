@@ -1,0 +1,35 @@
+#include "shdstd-cpp.h"
+
+using namespace std;
+
+class Solution {
+public:
+	int evalRPN(vector<string> &tokens) {
+		stack<int> st;
+
+		for (int i = 0; i < tokens.size(); ++i) {
+			string s = tokens[i];
+			if (s != "+" && s != "-" && s != "*" && s != "/") {
+				st.push(stoi(s));
+				continue;
+			}
+
+			int b = st.top();
+			st.pop();
+			int a = st.top();
+			st.pop();
+
+			if (s == "+") {
+				st.push(a + b);
+			} else if (s == "-") {
+				st.push(a - b);
+			} else if (s == "*") {
+				st.push(a * b);
+			} else {
+				st.push(a / b);
+			}
+		}
+
+		return st.top();
+	}
+};
